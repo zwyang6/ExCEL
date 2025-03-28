@@ -1,4 +1,4 @@
-# [CVPR2025] Exploring CLIP’s Dense Knowledge for Weakly Supervised Semantic Segmentation
+# [CVPR2025] Exploring CLIP’s Dense Knowledge for Weakly Supervised Semantic Segmentation [![arXiv](https://img.shields.io/badge/arXiv-2303.02506-b31b1b.svg)](https://arxiv.org/pdf/2503.20826)
 
 We explore CLIP’s dense knowledge via a novel patch-text alignment paradigm for WSSS.
 
