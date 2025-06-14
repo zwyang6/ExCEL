@@ -6,7 +6,7 @@ We explore CLIP’s dense knowledge via a novel patch-text alignment paradigm fo
 
 * **If you find this work helpful, please give us a :star2: to receive the updation !**
 * **` Feb. 26th, 2025`:** ExCEL is accepted by CVPR2025.
-* **We are sorting the code...** 🔥🔥🔥
+* **All code is released now !** 🔥🔥🔥
 
 ## Overview
 
@@ -67,7 +67,6 @@ COCO/
 
 Please refer to the requirements.txt. 
 
-We incorporate a regularization loss for segmentation. Please refer to the instruction for this [python extension](https://github.com/meng-tang/rloss/tree/master/pytorch#build-python-extension-module).
 
 ## Train ExCEL
 ``` bash
@@ -80,11 +79,15 @@ bash run_train.sh scripts/train_coco.py [gpu_devices] [gpu_numbers] [master_port
 
 ## Evaluate ExCEL
 ``` bash
-### eval voc seg and LAM
-bash run_evaluate_voc.sh tools/infer_lam.py [gpu_device] [gpu_number] [infer_set] [checkpoint_path]
+### eval voc training_free labels
+
+bash infer_lam.sh
+
+### eval voc seg
+bash infer_seg_voc.sh tools/infer_lam.py [gpu_device] [gpu_number] [infer_set] [checkpoint_path]
 
 ### eval coco seg
-bash run_evaluate_seg_coco.sh tools/infer_seg_coco.py [gpu_device] [gpu_number] [infer_set] [checkpoint_path]
+bash infer_seg_coco.sh tools/infer_seg_coco.py [gpu_device] [gpu_number] [infer_set] [checkpoint_path]
 ```
 
 ## Main Results
@@ -98,14 +101,15 @@ Semantic performance on VOC and COCO. Logs and weights are available now.
 ## Citation 
 Please cite our work if you find it helpful to your reseach. :two_hearts:
 ```bash
-@article{yang2024more,
-  title={MoRe: Class Patch Attention Needs Regularization for Weakly Supervised Semantic Segmentation},
-  author={Yang, Zhiwei and Neng, Yucong and Fu, Kexue and Wang, Shuo and Song, Zhijian},
-  journal={arXiv preprint arXiv:2402.18467},
-  year={2024}
+@inproceedings{yang2025exploring,
+  title={Exploring CLIP's Dense Knowledge for Weakly Supervised Semantic Segmentation},
+  author={Yang, Zhiwei and Meng, Yucong and Fu, Kexue and Tang, Feilong and Wang, Shuo and Song, Zhijian},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={20223--20232},
+  year={2025}
 }
 ```
 If you have any questions, please feel free to contact the author by zwyang21@m.fudan.edu.cn.
 
 ## Acknowledgement
-This repo is built upon [SeCo](https://github.com/zwyang6/SeCo.git) and [WeCLIP](https://github.com/zbf1991/WeCLIP). Many thanks to their brilliant works!!!
+This repo is built upon [SeCo](https://github.com/zwyang6/SeCo.git), [MoRe](https://github.com/zwyang6/MoRe) and [WeCLIP](https://github.com/zbf1991/WeCLIP). Many thanks to their brilliant works!!!
