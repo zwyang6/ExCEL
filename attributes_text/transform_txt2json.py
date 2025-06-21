@@ -51,7 +51,7 @@ if __name__ == "__main__":
                     'vase','scissors','teddy bear','hair drier','toothbrush']
 
     for data_name,cls_names in zip(datasets,[voc_class_list,coco_class_list]):
-        txt_path = f'/reference_codes/CLIP_Surgery/attributes_text/voc_cls_descriptions_it_3.txt'
-        pt_path = f'/reference_codes/CLIP_Surgery/attributes_text/descriptors_{data_name}_gpt4.0_cluster_a_photo_of4.json'
+        txt_path = f'/reference_codes/CLIP/attributes_text/voc_cls_descriptions_it_3.txt'
+        pt_path = f'/reference_codes/CLIP/attributes_text/descriptors_{data_name}_gpt4.0_cluster_a_photo_of4.json'
         entries_per_cls=20
         des_data = transform_txt2pt(cls_names,txt_path,pt_path,entries_per_cls)
